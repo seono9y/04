@@ -8,16 +8,17 @@
 #include <stdio.h>
 
 int main (int argc, char *argv[])
-{ int x, y = 0, z, m = 0;
-    int a, b, c;
-    x = 2;
-    z = 1;
-    a = 3;
-    b = 4;
-    c = 5;
+{ 
+    int a, b;
     
-    // y = ax^2 + bx + c
-    // m = x+y+z/3
+    printf("input two integers : ");
+    scanf("%i %i", &a,&b);
     
-    printf("y=%d, m=%d", y, m);
+    printf("%i + %i = %i \n", a, b, a+b);
+    printf("%i - %i = %i \n", a, b, a+b);
+    printf("%i * %i = %i \n", a, b, a+b);
+    printf("%i / %i = %i \n", a, b, a+b);
+    printf("%i %% %i = %i \n", a, b, a+b);
+
+    return 0;
 }
