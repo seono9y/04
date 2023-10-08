@@ -8,20 +8,24 @@
 #include <stdio.h>
 
 int main (int argc, char *argv[])
-{ 
-    unsigned int x;
-    int b;
+{
+    int a;
     
-    printf("input a number :");
-    scanf("%ui", &x);
+    printf("input seconds :");
+    scanf("%i", &a);
     
-    for (b=0; x!=0; x>>=1) // -> x = x >> 1
-    {
-        if(x & 1)
-        {
-            b++;
-        }
+
+    if (a >= 0) {
+        int hours = a / 3600;
+        int remainingSeconds = a % 3600;
+        int minutes = remainingSeconds / 60;
+        int seconds = remainingSeconds % 60;
+
+        printf("시간: %i 시, 분: %i 분, 초: %i 초\n", hours, minutes, seconds);
+    } else {
+        printf("올바른 정수를 입력하세요.\n");
     }
-    printf("The result is : %i\n", b);
+
     return 0;
 }
+    
